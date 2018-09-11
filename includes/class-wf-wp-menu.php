@@ -172,6 +172,8 @@ class Wf_Wp_Menu {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+        $this->loader->add_action( 'wf_nav_menu', $plugin_public, 'nav_menu' );
+        $this->loader->add_action( 'init', $plugin_public, 'register_my_menu' );
 
 	}
 
