@@ -1,6 +1,7 @@
 # Webflow to Wordpress menu
+This plugin creates WordPress menu structured as is in Webflow, so you can just copy-past Webflow .css and .js. It includes **dropdown** support.
 
-This plugin creates WordPress menu structured as is in Webflow, so you can just copy-past Webflow .css and .js.
+![Webflow Navbar in Wordrpess Screenshot](https://image.ibb.co/cFXO29/Screenshot_2018_09_11_12_16_08.png)
 
 # Installation
 
@@ -9,8 +10,6 @@ This plugin creates WordPress menu structured as is in Webflow, so you can just 
 3. Place `<?php do_action('wf_nav_menu','navbar-menu'); ?>` in your template header
 
 # Frequently Asked Questions
-
-# Screenshots
 
 # Changelog
 
