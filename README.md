@@ -7,7 +7,8 @@ This plugin creates WordPress menu structured as is in Webflow, so you can just 
 
 1. Upload `wf-wp-menu.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Place `<?php do_action('wf_nav_menu','navbar-menu'); ?>` in your template header
+3. Place `<?php do_action('wf_nav_menu','navbar-menu', 'my-custom-style'); ?>` in your template header
+4. Plugin will generate all <a> tags as `<a href="https://example.com/home" class="navigation-link nav-link my-custom-style w-nav-link " style="max-width: 940px;">Home</a>`
 4. Remember to include all Webflow .js and .css files.
 
 # Frequently Asked Questions
