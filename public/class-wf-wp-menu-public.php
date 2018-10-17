@@ -115,8 +115,9 @@ class Wf_Wp_Menu_Public {
      *
      * @since    1.0.0
      */
-    public function nav_menu($theme_location) {
+    public function nav_menu($theme_location, $custom_styles) {
 
+        $bool = false;
         // tutorial: https://developer.wordpress.org/reference/functions/wp_get_nav_menu_items/
         // check if there are some menus and if the wanted menu exists
         if (($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location])) {
@@ -149,7 +150,7 @@ class Wf_Wp_Menu_Public {
                     if ($bool == true && count($menu_array) > 0) {
 
                         $menu_list .= '<div data-delay="0" data-hover="1" class="w-dropdown">';
-                        $menu_list .= '<div class="navigation-link w-dropdown-toggle">';
+                        $menu_list .= '<div class="navigation-link nav-link '.$custom_styles.' w-dropdown-toggle">';
                         $menu_list .= '<div class="icon w-icon-dropdown-toggle"></div>';
                         $menu_list .= '<div>' . $menu_item->title . '</div>';
                         $menu_list .= '</div>';
@@ -163,7 +164,7 @@ class Wf_Wp_Menu_Public {
                     } else {
                         //normal menu
                         //$menu_list .= '<li>' ."\n";
-                        $menu_list .= '<a href="' . $menu_item->url . '" class="navigation-link w-nav-link' . $current . '">' . $menu_item->title . '</a>';
+                        $menu_list .= '<a href="' . $menu_item->url . '" class="navigation-link nav-link '.$custom_styles.' w-nav-link ' . $current . '">' . $menu_item->title . '</a>';
                     }//end if
                 }//end if
             }//end foreach
